@@ -8,12 +8,16 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Grid } from "@material-ui/core";
+import { useHistory } from "react-router";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    margin: '20px 0',
-    padding: '10px'
+    margin: '5px 0',
+    padding: '10px',
+    boxShadow: '5px 5px 40px black'
   },
   media: {
     height: 150,
@@ -23,6 +27,10 @@ const useStyles = makeStyles({
 
 const Team = (props) => {
   const { idTeam, strTeam, strTeamBadge, strSport } = props.team;
+  const history= useHistory();
+  const handleClubClick=(id)=>{
+    history.push(`/team/${id}`)
+  }
   const classes = useStyles();
   return (
     <Grid item xs={12} sm={6} md={4}>
@@ -43,12 +51,12 @@ const Team = (props) => {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button
+          <Button onClick={()=>handleClubClick(idTeam)}
             style={{ margin: "0 auto" }}
             variant="contained"
             color="primary"
           >
-            Explore
+            Explore &nbsp; <FontAwesomeIcon icon={faArrowRight} />
           </Button>
         </CardActions>
       </Card>
