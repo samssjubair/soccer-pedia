@@ -1,0 +1,19 @@
+.header-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    
+  }
+  .centered-txt {
+    position: absolute;
+    font-size: 2.5rem;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .header-img{
+      height: 250px;
+      width: 100%;
+      filter: brightness(50%);
+  }
