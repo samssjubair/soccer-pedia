@@ -13,7 +13,7 @@ const TeamDetail = () => {
     },[teamId])
     const {strStadiumThumb,strTeamBadge}=club;
     return (
-        <div style={{backgroundColor: '#0a0e2a',color: 'white'}}>
+        <div style={{backgroundColor: 'rgb(34 35 39)',color: 'white'}}>
             <HomeHeader images={{strTeamBadge,strStadiumThumb}}></HomeHeader>
             <DetailBody club={club}></DetailBody>
         </div>

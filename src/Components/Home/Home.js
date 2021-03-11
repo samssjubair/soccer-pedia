@@ -19,7 +19,7 @@ const Home = () => {
     },[])
     const classes=useStyles();
     return (
-        <div style={{backgroundColor:'#0a0e2a'}}>
+        <div style={{backgroundColor:'rgb(34 35 39'}}>
             <HomeHeader></HomeHeader>
             <Box width="75%" style={{margin: '0 auto',textAlign: 'center'}}>
             <Grid container className={classes.gridContainer}
