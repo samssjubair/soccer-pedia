@@ -48,8 +48,8 @@ const DetailBody = (props) => {
     strCountry,
     strSport,
     strDescriptionEN,
-    strStadiumDescription,
-    strTeamJersey,
+    strStadiumDescription
+    
   } = props.club;
   return (
     <Box width="75%" style={{ margin: "0 auto", textAlign: "center" }}>

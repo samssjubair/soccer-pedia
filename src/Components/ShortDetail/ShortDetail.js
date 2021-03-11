@@ -10,6 +10,10 @@ import { faMars } from '@fortawesome/free-solid-svg-icons'
 
 const ShortDetail = (props) => {
     const {intFormedYear ,strTeam,strGender,strCountry,strSport}= props.detail;
+    const displayImage= strGender==='Female' ? 
+    <img style={{borderRadius: '10px',height: '200px',width:'100%'}} src={femaleImage} alt=""/> :
+    <img style={{borderRadius: '10px',height: '200px',width:'100%'}} src={maleImage} alt=""/> ;
+
     return (
         <Grid container style={{backgroundColor: '#FC4D57',color: 'white',margin: '30px 0px',padding:'20px', textAlign:'left',borderRadius: '10px',display:'flex',alignItems:'center', justifyContent:'space-between'}}   >
             <Grid style={{marginBottom:'20px'}} item sm={12} md={8}>
@@ -20,7 +24,9 @@ const ShortDetail = (props) => {
                 <p><FontAwesomeIcon fixedWidth  size='xs' icon={faMars} /> &nbsp;Gender: {strGender}</p>
             </Grid>
             <Grid item sm={12} md={4}>
-                <img style={{borderRadius: '10px',height: '200px',width:'100%'}} src={maleImage} alt=""/>
+                {
+                    displayImage
+                }
             </Grid>
         </Grid>
     );

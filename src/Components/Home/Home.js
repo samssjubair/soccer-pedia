@@ -29,7 +29,7 @@ const Home = () => {
                 alignItems="center"
                 >
              {
-                teams.map(tm=> <Team team={tm}></Team> )
+                teams.map(tm=> <Team key={tm.idTeam} team={tm}></Team> )
             }
              </Grid>
             

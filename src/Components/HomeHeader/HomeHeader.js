@@ -16,7 +16,6 @@ const HomeHeader = (props) => {
     }
     else{
         isHome=true;
-        console.log(isHome);
         return (
             <div className="header-container">
                 <img className="header-img bright-50" src={ coverImage } alt=""/>
