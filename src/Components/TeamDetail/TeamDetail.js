@@ -10,7 +10,7 @@ const TeamDetail = () => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`)
         .then(res=>res.json())
         .then(data=>setClub(data.teams[0]))
-    },[])
+    },[teamId])
     const {strStadiumThumb,strTeamBadge}=club;
     return (
         <div style={{backgroundColor: '#0a0e2a',color: 'white'}}>
